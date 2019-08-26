@@ -5,8 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Base Apparel coming soon page</title>
+  <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/styles.css">
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
@@ -15,18 +19,36 @@
   </style>
 </head>
 <body>
-
-  We're coming soon
-
-  Hello fellow shoppers! We're currently building our new fashion store. 
-  Add your email below to stay up-to-date with announcements and our launch deals.
-
-  Email Address
-  
+  <div class="logo">
+    <img src="images/logo.svg" alt="logo of Base Apparel">
+  </div>
+  <div class="container">
+    <div class="banner-wrapper">
+      <div class="banner"></div>
+    </div>
+    <div class="main-content-wrapper">
+      <div class="main-content">
+        <h1>
+          <span>We're</span>
+          <span>coming</span>
+          <span>soon</span>
+        </h1>
+        <p class="message">
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+        <div class="email">
+          <input type="email" placeholder="Email Address">
+          <button type="submit"><i class="fas fa-greater-than"></i></button>
+        </div>
+      </div>
+    </div>
+  </div>
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-      Coded by <a href="#">Your Name Here</a>.
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="http://enockaddey.com/">Enock Kwesi Addey</a>.
     </p>
   </footer>
 </body>
