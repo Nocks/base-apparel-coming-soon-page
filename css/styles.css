@@ -1,3 +1,152 @@
+:root {
+  box-sizing: border-box;
+}
 
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1rem;
+  line-height: 1.5em;
+  color: #ce9797;
+  background-image: linear-gradient(135deg, white, #fff5f5);
+}
+
+body * + * {
+  margin-top: 1.5em;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.container {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.logo img {
+  height: 24px;
+}
+
+.banner-wrapper {
+  padding-top: 5em;
+  background-color: #fff;
+}
+.banner-wrapper .banner {
+  background-image: url("../images/hero-mobile.jpg");
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 55vh;
+  width: 100%;
+}
+
+.main-content-wrapper {
+  padding: 0.8em 2em;
+}
+.main-content-wrapper .main-content {
+  text-align: center;
+}
+.main-content-wrapper .main-content h1 {
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #413a3a;
+  font-size: 3em;
+}
+.main-content-wrapper .main-content h1 span {
+  display: block;
+}
+.main-content-wrapper .main-content h1 span + span {
+  margin-top: 0.6em;
+}
+.main-content-wrapper .main-content h1 span:first-child {
+  color: #ce9797;
+  font-weight: 300;
+}
+.main-content-wrapper .main-content .email {
+  position: relative;
+}
+.main-content-wrapper .main-content .email input {
+  border-radius: 25px;
+  border: 1px solid #ce9797;
+  padding: 20px;
+  width: 90%;
+  height: 15px;
+}
+.main-content-wrapper .main-content .email button {
+  position: absolute;
+  bottom: 1px;
+  right: 5%;
+  background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
+  border: none;
+  color: white;
+  padding: 10px;
+  width: 60px;
+  height: 41px;
+  font-weight: 400;
+  font-size: 1.4em;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 25px;
+}
+
+footer {
+  margin-bottom: 0.2em;
+}
+
+footer .attribution {
+  font-size: 0.625em;
+  text-align: center;
+}
+footer .attribution a {
+  color: #3e52a3;
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  border: none;
+}
+
+a:active, a:focus {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
+
+.attribution a:link {
+  color: #3e52a3;
+}
+.attribution a:visited {
+  color: #3e52a3;
+}
+.attribution a:active {
+  color: #3e52a3;
+}
 
 /*# sourceMappingURL=styles.css.map */

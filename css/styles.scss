@@ -1,0 +1,172 @@
+$primary-font: 'Josefin Sans', sans-serif;
+
+$desaturated-red: hsl(0, 36%, 70%);
+$soft-red: hsl(0, 93%, 68%);
+$dark-grayish-red: hsl(0, 6%, 24%);
+
+:root {
+  box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: $primary-font;
+  font-size: 1rem;
+  line-height: 1.5em;
+  color: $desaturated-red;
+  background-image: linear-gradient(135deg, hsl(0, 0%, 100%), hsl(0, 100%, 98%));
+}
+
+body * + * {
+  margin-top: 1.5em;
+}
+
+h1, h2, h3, h4, h5 {
+  font-family: $primary-font;
+}
+
+.container {
+  margin-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+
+    img {
+      height: 24px;
+    }
+}
+
+.banner-wrapper {
+  padding-top: 5em;
+  background-color: #fff;
+
+    .banner {
+      background-image: url("../images/hero-mobile.jpg");
+      background-position: top left;
+      background-repeat: no-repeat;
+      background-size: cover;
+      height: 55vh;
+      width: 100%;
+    }
+}
+
+.main-content-wrapper {
+  padding: 0.8em 2em;
+
+    .main-content {
+      text-align: center;
+
+        h1 {
+          text-transform: uppercase;
+          letter-spacing: 0.2em;
+          color: $dark-grayish-red;
+          font-size: 3em;
+
+            span {
+              display: block;
+            }
+
+            span + span {
+              margin-top: 0.6em;
+            }
+
+            span:first-child {
+              color: $desaturated-red;
+              font-weight: 300;
+            }
+        }
+
+        .email {
+          position: relative;
+
+            input {
+              border-radius: 25px;
+              border: 1px solid $desaturated-red;
+              padding: 20px;
+              width: 90%;
+              height: 15px;
+            }
+
+            button {
+              position: absolute;
+              bottom: 1px;
+              right: 5%;
+              background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+              border: none;
+              color: white;
+              padding: 10px;
+              width: 60px;
+              height: 41px;
+              font-weight: 400;
+              font-size: 1.4em;
+              text-align: center;
+              text-decoration: none;
+              display: inline-block;
+              border-radius: 25px;
+            }
+        }
+    }
+}
+
+footer {
+  margin-bottom: 0.2em;
+}
+
+footer .attribution {
+  font-size: 0.625em;
+  text-align: center;
+
+    a {
+      color: hsl(228, 45%, 44%);
+    }
+}
+
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  border: none;
+}
+
+a:active, a:focus {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
+
+.attribution {
+
+    a:link {
+      color: hsl(228, 45%, 44%);
+    }
+
+    a:visited {
+      color: hsl(228, 45%, 44%);
+    }
+
+    a:active {
+      color: hsl(228, 45%, 44%);
+    }
+}
