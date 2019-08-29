@@ -37,8 +37,27 @@ h1, h2, h3, h4, h5 {
   font-family: $primary-font;
 }
 
+a:link,
+a:visited,
+a:active {
+  text-decoration: none;
+  border: none;
+}
+
+a:active, a:focus {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none;
+}
+
+button:focus,
+input:focus {
+  outline: none;
+}
+
 .container {
   margin-top: 0;
+  width: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -62,13 +81,14 @@ h1, h2, h3, h4, h5 {
       background-position: top left;
       background-repeat: no-repeat;
       background-size: cover;
-      height: 55vh;
+      height: 70vh;
       width: 100%;
     }
 }
 
 .main-content-wrapper {
   padding: 0.8em 2em;
+  width: 100%;
 
     .main-content {
       text-align: center;
@@ -102,12 +122,16 @@ h1, h2, h3, h4, h5 {
               padding: 20px;
               width: 90%;
               height: 15px;
+
+              &::placeholder {
+                color: $desaturated-red;
+              }
             }
 
             button {
               position: absolute;
               bottom: 1px;
-              right: 5%;
+              right: 10%;
               background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
               border: none;
               color: white;
@@ -120,14 +144,25 @@ h1, h2, h3, h4, h5 {
               text-decoration: none;
               display: inline-block;
               border-radius: 25px;
+              cursor: pointer;
+              -webkit-box-shadow: 2px 5px 15px 0px rgba(248,191,191,1);
+              -moz-box-shadow: 2px 5px 15px 0px rgba(248,191,191,1);
+              box-shadow: 2px 5px 15px 0px rgba(248,191,191,1);
+
+                &:hover {
+                  background-image: none;
+                  background-color: #f8cecf;
+                }
+
+                &:active {
+                  background-color: #f8cecf;
+                }
             }
         }
     }
 }
 
-footer {
-  margin-bottom: 0.2em;
-}
+
 
 footer .attribution {
   font-size: 0.625em;
@@ -136,27 +171,6 @@ footer .attribution {
     a {
       color: hsl(228, 45%, 44%);
     }
-}
-
-a:link,
-a:visited,
-a:active {
-  text-decoration: none;
-  border: none;
-}
-
-a:active, a:focus {
-  outline: 0;
-  border: none;
-  -moz-outline-style: none;
-}
-
-button:focus,
-input:focus {
-  outline: none;
-}
-
-.attribution {
 
     a:link {
       color: hsl(228, 45%, 44%);
@@ -166,7 +180,307 @@ input:focus {
       color: hsl(228, 45%, 44%);
     }
 
+    a:hover {
+      color: hsl(228, 45%, 44%);
+    }
+
     a:active {
       color: hsl(228, 45%, 44%);
     }
+}
+
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+
+  body {
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-position: top center;
+    background-size: cover;
+  }
+
+  .container {
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .logo {
+    position: absolute;
+    top: 40px;
+    left: 100px;
+
+      img {
+        height: 27px;
+      }
+  }
+
+  .banner-wrapper {
+    flex: 1 1 45%;
+    order: 2;
+    padding-top: 0;
+
+    .banner {
+      background-image: url("../images/hero-desktop.jpg");
+      height: 100vh;
+      max-height: 1440px;
+
+    }
+  }
+
+  .main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 55%;
+    order: 1;
+    margin-top: 0;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+
+      .main-content {
+        text-align: left;
+        padding-top: 1em;
+        padding-left: 100px;
+        padding-right: 150px;
+        padding-bottom: 30px;
+
+          h1 {
+            font-size: 3.1em;
+          }
+
+          .email {
+            margin-top: 2.5em;
+          }
+      }
+
+      footer {
+        margin-bottom: 0.2em;
+        margin-top: 6.250em;
+        line-height: 1em;
+        position: absolute;
+        bottom: 10px;
+        left: 20%;
+
+          .attribution {
+            margin-top: 0;
+            font-size: 0.688em;
+          }
+      }
+  }
+
+}
+
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+  body {
+    background-image: url("../images/bg-pattern-desktop.svg");
+    background-position: top center;
+    background-size: cover;
+  }
+
+  .container {
+    margin-top: 0;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+  }
+
+  .logo {
+    position: absolute;
+    top: 40px;
+    left: 100px;
+
+      img {
+        height: 27px;
+      }
+  }
+
+  .banner-wrapper {
+    flex: 1 1 45%;
+    order: 2;
+    padding-top: 0;
+
+    .banner {
+      background-image: url("../images/hero-desktop.jpg");
+      height: 100vh;
+      max-height: 1440px;
+
+    }
+  }
+
+  .main-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 55%;
+    order: 1;
+    margin-top: 0;
+    justify-content: center;
+    padding: 0;
+    position: relative;
+
+      .main-content {
+        text-align: left;
+        padding-top: 1em;
+        padding-left: 100px;
+        padding-right: 150px;
+        padding-bottom: 30px;
+
+          h1 {
+            font-size: 3.1em;
+          }
+
+          .email {
+            margin-top: 2.5em;
+          }
+      }
+
+      footer {
+        margin-bottom: 0.2em;
+        margin-top: 6.250em;
+        line-height: 1em;
+        position: absolute;
+        bottom: 10px;
+        left: 20%;
+
+          .attribution {
+            margin-top: 0;
+            font-size: 0.688em;
+          }
+      }
+  }
+}
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+  .main-content-wrapper {
+
+      .main-content {
+        .email {
+            input {
+              width: 70%;
+            }
+
+            button {
+              right: 15%;
+            }
+        }
+      }
+
+      footer {
+        margin-bottom: 0.2em;
+        margin-top: 6.250em;
+        line-height: 1em;
+
+          .attribution {
+            margin-top: 0;
+          }
+      }
+  }
+
+}
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+  .main-content-wrapper {
+
+      .main-content {
+        .email {
+            input {
+              width: 70%;
+            }
+
+            button {
+              right: 15%;
+            }
+        }
+      }
+
+      footer {
+        margin-bottom: 0.2em;
+        margin-top: 6.250em;
+        line-height: 1em;
+
+          .attribution {
+            margin-top: 0;
+          }
+      }
+  }
+
+}
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+
+  .main-content-wrapper {
+
+    padding-bottom: 0;
+
+      footer {
+        margin-bottom: 0.2em;
+        margin-top: 6.250em;
+        line-height: 1em;
+
+          .attribution {
+            margin-top: 0;
+          }
+      }
+  }
+}
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+
+  .main-content-wrapper {
+
+    padding-bottom: 0;
+
+      footer {
+        margin-bottom: 0.2em;
+        margin-top: 6.250em;
+        display: flex;
+        flex-direction: column;
+        line-height: 1em;
+
+          .attribution {
+            margin-top: 0;
+          }
+
+          .attribution span {
+            display: block;
+          }
+
+          span + span {
+            margin-top: 0;
+          }
+      }
+  }
 }
