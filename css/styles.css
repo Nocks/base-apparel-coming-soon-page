@@ -117,7 +117,7 @@ input:focus {
 .main-content-wrapper .main-content .email button {
   position: absolute;
   bottom: 1px;
-  right: 10%;
+  right: 5%;
   background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
   border: none;
   color: white;
@@ -224,6 +224,9 @@ footer .attribution a:active {
   .main-content-wrapper .main-content .email {
     margin-top: 2.5em;
   }
+  .main-content-wrapper .main-content .email button {
+    right: 10%;
+  }
   .main-content-wrapper footer {
     margin-bottom: 0.2em;
     margin-top: 6.25em;
@@ -297,6 +300,9 @@ footer .attribution a:active {
   }
   .main-content-wrapper .main-content .email {
     margin-top: 2.5em;
+  }
+  .main-content-wrapper .main-content .email button {
+    right: 10%;
   }
   .main-content-wrapper footer {
     margin-bottom: 0.2em;
